@@ -3,6 +3,15 @@
 // 	•	Dummy Data:
 
 const dbUser = { id: 1, name: "John Doe", age: 25, email: "john@example.com" };
-const apiUser = { username: "johnny_d", followers: 150, bio: "Loves coding!" };
+const apiUser = {
+	username: "johnny_d",
+	followers: 150,
+	bio: "Loves coding!",
+	email: "prashant",
+};
 
 // Task: Merge both objects into one fullUser object without modifying the original objects.
+
+const fullObj = { ...dbUser, ...apiUser };
+
+console.log(fullObj);

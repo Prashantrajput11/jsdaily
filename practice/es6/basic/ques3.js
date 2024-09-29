@@ -9,3 +9,7 @@ const orders = [
 ];
 
 // Task: Use a for...of loop to log each order’s product name and total amount to the console.
+
+for (const order of orders) {
+	console.log(order.product, order.total);
+}

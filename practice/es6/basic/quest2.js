@@ -9,3 +9,9 @@ const cart = [
 ];
 
 // Task: Use array destructuring to remove the first two items and keep the rest in a separate variable.
+
+const [firstItem, secondItem, ...restItem] = cart;
+
+// console.log(firstItem, secondItem);
+
+console.log(restItem);
