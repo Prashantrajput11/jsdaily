@@ -11,3 +11,17 @@ const cartMobile = [
 ];
 
 // •	Task: Combine both carts, and ensure there are no duplicate items based on the product ID.
+
+const combinedcart = { ...cartMobile, ...cartMobile };
+// --> produces a diff result, look into this tomorwo
+
+const combinedCart = [...new Set(cartMobile, cartWeb)];
+
+// the soltuin to this is imp for learning, dont forget do do this tomorow
+
+const reducedCart = [...cartWeb, ...cartMobile].reduce((acc, item) => {
+	acc[item.id] = item;
+	return acc;
+}, {});
+
+console.log("🚀 ~ reducedCart ~ reducedCart:", Object.values(reducedCart));
